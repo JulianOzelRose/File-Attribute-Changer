@@ -32,7 +32,7 @@ is read-only by using ```FileAttributes.ReadOnly```.
 
 ## Encryption and compression
 This tool uses ```System.IO``` for encryption and decryption. For compression, it uses Windows native methods. It checks to ensure that the
-file system is NTFS before proceeding with decryption/encryption. If a compression operation is performed on an encrypted file, the tool
+file system is NTFS before proceeding with compression. If a compression operation is performed on an encrypted file, the tool
 decrypts the file first. Note that for decryption/encryption and compression, it is not enough to just modify the bitmask; the encryption/decryption
 and compression must be done in addition to the bitwise operation.
 
