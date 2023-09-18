@@ -16,7 +16,12 @@ you can modify timestamps, encrypt the file, compress the file, set the file to 
 ## File attributes
 The file attributes enum has 16 different fields. This program reads and manipulates 7 of those. A file can only either be compressed or encrypted,
 and a read-only file cannot be modified. All of these fields can be called using bitwise operators. For example, you can find whether or not a file
-is read-only by using:<br> ```bool isReadOnly = (attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly```
+is read-only by using:
+
+```
+FileAttributes attributes = File.GetAttributes(filePath);
+bool isReadOnly = (attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly;
+```
 
 ###       ```FileAttributes```                                  ###
 | **Attribute**          | **Value** | **Description**                 |
