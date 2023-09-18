@@ -1,7 +1,7 @@
 # File Attribute Changer
 A simple file attribute modification tool. It allows users to manipulate various
 attributes and properties associated with files, such as modifying timestamps, setting
-attributes like Read-only, Hidden, Compressed, Encrypted, and System. The purpose of
+attributes like read-only, hidden, compressed, encrypted, and system. The purpose of
 this program is to better understand the Windows API and the .NET Framework,
 specifically with file manipulation and bitmasks.
 
