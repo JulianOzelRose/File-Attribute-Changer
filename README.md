@@ -10,12 +10,12 @@ specifically with file manipulation and bitmasks.
 ## Installation and use
 This program does not require any setup. Simply navegate to the [Release](https://github.com/JulianOzelRose/File-Attribute-Changer/tree/master/File-Attribute-Changer/bin/x64/Release)
 folder, then download ```File-Attribute-Changer.exe```, and then run it. Once open, click ```Browse``` to select a file of your choice. From there,
-you can modify timestamps, encrypt the file, compress the file, set the file to read-only, or set it as a system file. When finished just click
+you can modify timestamps, encrypt/decrypt the file, compress/decompress the file, set the file to read-only, or set it as a system file. When finished just click
 ```Apply``` or ```OK``` for the application to save and exit.
 
 ## File attributes
 The file attributes enum has 16 different fields. This program reads and manipulates 7 of those. A file can only either be compressed or encrypted,
-and a read-only file cannot be modified. All of these fields can be called using bitwise operators. For example, you can find whether or not a file
+and a read-only file cannot be modified. All of these fields can be called using bitwise operators. For example, you can find out whether or not a file
 is read-only by using:
 
 ```
@@ -36,10 +36,10 @@ bool isReadOnly = (attributes & FileAttributes.ReadOnly) == FileAttributes.ReadO
 | Offline                | 0x1000    | The file is offline/unavailable |
 
 ## Encryption and compression
-This tool uses ```System.IO``` for encryption and decryption. For compression, it uses Windows native methods. It checks to ensure that the
+This tool uses ```System.IO``` for encryption and decryption. For compression and decompression, it uses Windows native methods. It checks to ensure that the
 file system is NTFS before proceeding with compression. If a compression operation is performed on an encrypted file, the tool
-decrypts the file first. Note that for decryption/encryption and compression, it is not enough to just modify the bitmask; the encryption/decryption
-and compression must be done in addition to the bitwise operation.
+decrypts the file first. Note that for encryption and compression operations, it is not enough to just modify the bitmask; the encryption
+and compression operations themselves must be done in addition to the bitmask modifications.
 
 ## Sources
 - [FileAttributes Enum](https://learn.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-7.0)
