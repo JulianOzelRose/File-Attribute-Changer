@@ -14,8 +14,8 @@ you can modify timestamps, encrypt/decrypt the file, compress/decompress the fil
 ```Apply``` or ```OK``` for the application to save and exit.
 
 ## File attributes
-The file attributes enum has 16 different fields. This program reads and manipulates 7 of those. A file can only either be compressed or encrypted,
-and a read-only file cannot be modified. All of these fields can be called using bitwise operators. For example, you can find out whether or not a file
+The Windows file attributes enum has 16 different fields. This program reads and manipulates 7 of those. A file can only either be compressed or encrypted,
+and a read-only file cannot be modified. All of these fields can be parsed using bitwise operators. For example, you can find out whether or not a file
 is read-only by using:
 
 ```
@@ -23,17 +23,17 @@ FileAttributes attributes = File.GetAttributes(filePath);
 bool isReadOnly = (attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly;
 ```
 
-###       ```FileAttributes```                                  ###
-| **Attribute**          | **Value** | **Description**                 |
-| :---                   | :---      | :---                            |
-| Normal                 | 0x0080    | The file has no attributes      |
-| Compressed             | 0x0800    | The file is compressed          |
-| Hidden                 | 0x0002    | The file is hidden              |
-| Encrypted              | 0x4000    | The file's data is encrypted    |
-| ReadOnly               | 0x0001    | The file is read-only           |
-| System                 | 0x0004    | The file is a system file       |
-| NotContentIndexed      | 0x2000    | The file won't be indexed       |
-| Offline                | 0x1000    | The file is offline/unavailable |
+###       ```FileAttributes```                           ###
+| **Attribute**          | **Description**                 |
+| :---                   | :---                            |
+| Normal                 | The file has no attributes      |
+| Compressed             | The file is compressed          |
+| Hidden                 | The file is hidden              |
+| Encrypted              | The file's data is encrypted    |
+| ReadOnly               | The file is read-only           |
+| System                 | The file is a system file       |
+| NotContentIndexed      | The file won't be indexed       |
+| Offline                | The file is offline/unavailable |
 
 ## Encryption and compression
 This tool uses ```System.IO``` for encryption and decryption. For compression and decompression, it uses Windows native methods. It checks to ensure that the
