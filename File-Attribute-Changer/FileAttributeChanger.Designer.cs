@@ -347,6 +347,7 @@ namespace File_Attribute_Changer
             // 
             // ApplyButton
             // 
+            this.ApplyButton.Enabled = false;
             this.ApplyButton.Location = new System.Drawing.Point(244, 400);
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.Size = new System.Drawing.Size(75, 23);
@@ -367,6 +368,7 @@ namespace File_Attribute_Changer
             // 
             // OKButton
             // 
+            this.OKButton.Enabled = false;
             this.OKButton.Location = new System.Drawing.Point(82, 400);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);

@@ -344,6 +344,10 @@ namespace File_Attribute_Changer
                     SHFILEINFO shfi = new SHFILEINFO();
                     IntPtr hIcon = SHGetFileInfo(filePath, 0, out shfi, (uint)Marshal.SizeOf(shfi), SHGFI_TYPENAME | SHGFI_DISPLAYNAME);
 
+                    // Update button states
+                    ApplyButton.Enabled = true;
+                    OKButton.Enabled = true;
+
                     if (hIcon != IntPtr.Zero)
                     {
                         fileTypeTextBox.Text = shfi.szTypeName + " (" + fileExtension + ")";
