@@ -391,6 +391,7 @@ namespace File_Attribute_Changer
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FileAttributeChanger";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "File Attribute Changer";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
