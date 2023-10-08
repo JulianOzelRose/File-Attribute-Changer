@@ -36,7 +36,7 @@ bool isReadOnly = (attributes & FileAttributes.ReadOnly) == FileAttributes.ReadO
 | Offline                | The file is offline/unavailable |
 
 ## Encryption and compression
-This tool uses ```System.IO``` for encryption and decryption. For compression and decompression, it uses Windows native methods. It checks to ensure that the
+This tool uses ```System.IO``` for encryption and decryption. For compression and decompression, it uses Windows native methods. It first checks to ensure that the
 file system is NTFS before proceeding with compression. If a compression operation is performed on an encrypted file, the tool
 decrypts the file first. Note that for encryption and compression operations, it is not enough to just modify the bitmask; the encryption
 and compression operations themselves must be done in addition to the bitmask modifications.
