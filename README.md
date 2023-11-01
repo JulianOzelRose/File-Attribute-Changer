@@ -11,7 +11,7 @@ specifically with file manipulation and bitmasks.
 This program does not require any setup. Simply navegate to the [Release](https://github.com/JulianOzelRose/File-Attribute-Changer/tree/master/File-Attribute-Changer/bin/x64/Release)
 folder, then download ```File-Attribute-Changer.exe```, and then run it. Once open, click ```Browse``` to select a file of your choice. From there,
 you can modify timestamps, encrypt/decrypt the file, compress/decompress the file, set the file to read-only, or set it as a system file. When finished just click
-```Apply``` or ```OK``` for the application to save and exit.
+```Apply``` or ```OK``` for the application to save and exit. In order to modify files located in system directories, you will have to give this application elevated privileges.
 
 ## File attributes
 The Windows file attributes enum has 16 different fields. This program reads and manipulates 7 of those. A file can only either be compressed or encrypted,
