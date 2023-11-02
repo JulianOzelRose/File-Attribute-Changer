@@ -13,6 +13,14 @@ folder, then download ```File-Attribute-Changer.exe```, and then run it. Once op
 you can modify timestamps, encrypt/decrypt the file, compress/decompress the file, set the file to read-only, or set it as a system file. When finished just click
 ```Apply``` or ```OK``` for the application to save and exit. In order to modify files located in system directories, you will have to give this application elevated privileges.
 
+## Timestomping
+In the context of cybersecurity and hacking, timestomping is a technique used to manipulate or forge timestamps
+associated with system files or logs on a computer system or network. It is typically used by black hat hackers to
+cover their tracks and evade detection from cybersecurity professionals and investigators. By altering timestamps,
+attackers can make it appear as though their activities occurred at different times. Timestomping is part of a broader
+set of techniques used in cybercrime to undermine the integrity of digital evidence. Ethical hackers may also use
+timestomping to simulate scenarios where hackers use manipulated timestamps to cover their tracks.
+
 ## File attributes
 The Windows file attributes enum has 16 different fields. This program reads and manipulates 7 of those. A file can only either be compressed or encrypted,
 and a read-only file cannot be modified. All of these fields can be parsed using bitwise operators. For example, you can find out whether or not a file
