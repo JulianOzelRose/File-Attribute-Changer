@@ -53,7 +53,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>FileAttributeChangerIcon.ico</ApplicationIcon>
+    <ApplicationIcon>File-Attribute-Changer-Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -70,16 +70,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileAttributeChanger.cs">
+    <Compile Include="File-Attribute-Changer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FileAttributeChanger.Designer.cs">
-      <DependentUpon>FileAttributeChanger.cs</DependentUpon>
+    <Compile Include="File-Attribute-Changer.Designer.cs">
+      <DependentUpon>File-Attribute-Changer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FileAttributeChanger.resx">
-      <DependentUpon>FileAttributeChanger.cs</DependentUpon>
+    <EmbeddedResource Include="File-Attribute-Changer.resx">
+      <DependentUpon>File-Attribute-Changer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,8 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\x64\Release\File-Attribute-Changer.exe" />
-    <Content Include="FileAttributeChangerIcon.ico" />
-    <Content Include="Resources\FileAttributeChangerIcon.ico" />
+    <Content Include="File-Attribute-Changer-Icon.ico" />
+    <Content Include="Resources\File-Attribute-Changer-Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

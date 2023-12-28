@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Management;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 /*
     Julian O. Rose
@@ -37,9 +37,9 @@ namespace File_Attribute_Changer
         public void WriteAttributes()
         {
             // Format timestamps
-            DateTime modifiedDateTime = dateModifiedTimePicker.Value.Date + timeModifiedTimePicker.Value.TimeOfDay;
-            DateTime createdDateTime = dateCreatedTimePicker.Value.Date + timeCreatedTimePicker.Value.TimeOfDay;
-            DateTime accessedDateTime = dateAccessedTimePicker.Value.Date + timeAccessedTimePicker.Value.TimeOfDay;
+            DateTime modifiedDateTime = dtpDateModified.Value.Date + dtpTimeModified.Value.TimeOfDay;
+            DateTime createdDateTime = dtpDateCreated.Value.Date + dtpTimeCreated.Value.TimeOfDay;
+            DateTime accessedDateTime = dtpDateAccessed.Value.Date + dtpTimeAccessed.Value.TimeOfDay;
 
             try
             {
@@ -49,31 +49,31 @@ namespace File_Attribute_Changer
                 File.SetLastAccessTime(filePath, accessedDateTime);
 
                 // Handle writing Read-only attribute
-                if (readOnlyCheckBox.Checked && !isReadOnly)
+                if (chkReadOnly.Checked && !isReadOnly)
                 {
                     File.SetAttributes(filePath, File.GetAttributes(filePath) | FileAttributes.ReadOnly);
                     isReadOnly = true;
                 }
-                else if (!readOnlyCheckBox.Checked && isReadOnly)
+                else if (!chkReadOnly.Checked && isReadOnly)
                 {
                     File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.ReadOnly);
                     isReadOnly = false;
                 }
 
                 // Handle writing Hidden attribute
-                if (hiddenCheckBox.Checked && !isHidden)
+                if (chkHidden.Checked && !isHidden)
                 {
                     File.SetAttributes(filePath, File.GetAttributes(filePath) | FileAttributes.Hidden);
                     isHidden = true;
                 }
-                else if (!hiddenCheckBox.Checked && isHidden)
+                else if (!chkHidden.Checked && isHidden)
                 {
                     File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.Hidden);
                     isHidden = false;
                 }
 
                 // Handle writing Compression attribute and NTFS compression
-                if (compressedCheckbox.Checked && !isCompressed)
+                if (chkCompressed.Checked && !isCompressed)
                 {
                     if (isEncrypted)
                     {
@@ -82,7 +82,7 @@ namespace File_Attribute_Changer
                         File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.Encrypted);
                         isEncrypted = false;
                     }
-         
+
                     if (IsNTFS(filePath))
                     {
                         // Enable NTFS compression and set Compression attribute
@@ -91,7 +91,7 @@ namespace File_Attribute_Changer
                         isCompressed = true;
                     }
                 }
-                else if (!compressedCheckbox.Checked && isCompressed)
+                else if (!chkCompressed.Checked && isCompressed)
                 {
                     if (IsNTFS(filePath))
                     {
@@ -103,14 +103,14 @@ namespace File_Attribute_Changer
                 }
 
                 // Handle writing Encryption attribute and NTFS encryption
-                if (encryptedCheckBox.Checked && !isEncrypted)
+                if (chkEncrypted.Checked && !isEncrypted)
                 {
                     // Encrypt the file
                     File.Encrypt(filePath);
                     File.SetAttributes(filePath, File.GetAttributes(filePath) | FileAttributes.Encrypted);
                     isEncrypted = true;
                 }
-                else if (!encryptedCheckBox.Checked && isEncrypted)
+                else if (!chkEncrypted.Checked && isEncrypted)
                 {
                     // Decrypt the file
                     File.Decrypt(filePath);
@@ -119,24 +119,24 @@ namespace File_Attribute_Changer
                 }
 
                 // Handle writing Index attribute
-                //if (indexedCheckbox.Checked && !isIndexed)
+                //if (chkIndexed.Checked && !isIndexed)
                 //{
                 //    File.SetAttributes(filePath, File.GetAttributes(filePath) | ~FileAttributes.NotContentIndexed);
                 //    isIndexed = true;
                 //}
-                //else if (!indexedCheckbox.Checked && isIndexed)
+                //else if (!chkIndexed.Checked && isIndexed)
                 //{
                 //    File.SetAttributes(filePath, File.GetAttributes(filePath) & FileAttributes.NotContentIndexed);
                 //    isIndexed = false;
                 //}
 
                 // Handle writing System attribute
-                if (systemCheckBox.Checked && !isSystem)
+                if (chkSystem.Checked && !isSystem)
                 {
                     File.SetAttributes(filePath, File.GetAttributes(filePath) | FileAttributes.System);
                     isSystem = true;
                 }
-                else if (!systemCheckBox.Checked && isSystem)
+                else if (!chkSystem.Checked && isSystem)
                 {
                     File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.System);
                     isSystem = false;
@@ -286,7 +286,7 @@ namespace File_Attribute_Changer
         public const uint SHGFI_DISPLAYNAME = 0x000000200;      // Display name
         public const uint SHGFI_TYPENAME = 0x000000400;         // Type name
 
-        private void BrowseButton_Click(object sender, EventArgs e)
+        private void btnBrowse_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -317,27 +317,27 @@ namespace File_Attribute_Changer
                     isEncrypted = (attributes & FileAttributes.Encrypted) == FileAttributes.Encrypted;
 
                     // Display file attributes
-                    fileLocationTextBox.Text = directoryPath;
-                    filenameTextBox.Text = fileName;
-                    fileSizeTextBox.Text = fileSizeFormatted;
-                    hiddenCheckBox.Checked = isHidden;
-                    readOnlyCheckBox.Checked = isReadOnly;
-                    systemCheckBox.Checked = isSystem;
-                    indexedCheckbox.Checked = isIndexed;
-                    compressedCheckbox.Checked = isCompressed;
-                    encryptedCheckBox.Checked = isEncrypted;
+                    txtFileLocation.Text = directoryPath;
+                    txtFilename.Text = fileName;
+                    txtFileSize.Text = fileSizeFormatted;
+                    chkHidden.Checked = isHidden;
+                    chkReadOnly.Checked = isReadOnly;
+                    chkSystem.Checked = isSystem;
+                    chkIndexed.Checked = isIndexed;
+                    chkCompressed.Checked = isCompressed;
+                    chkEncrypted.Checked = isEncrypted;
 
                     // Display date attributes
-                    dateModifiedTimePicker.Value = File.GetLastWriteTime(filePath);
-                    dateCreatedTimePicker.Value = File.GetCreationTime(filePath);
-                    dateAccessedTimePicker.Value = File.GetLastAccessTime(filePath);
+                    dtpDateModified.Value = File.GetLastWriteTime(filePath);
+                    dtpDateCreated.Value = File.GetCreationTime(filePath);
+                    dtpDateAccessed.Value = File.GetLastAccessTime(filePath);
 
                     // Display time attributes
-                    timeModifiedTimePicker.Value = new DateTime(lastAccessTime.Year, lastAccessTime.Month, lastAccessTime.Day)
+                    dtpTimeModified.Value = new DateTime(lastAccessTime.Year, lastAccessTime.Month, lastAccessTime.Day)
                         .Add(File.GetLastWriteTime(filePath).TimeOfDay);
-                    timeCreatedTimePicker.Value = new DateTime(lastAccessTime.Year, lastAccessTime.Month, lastAccessTime.Day)
+                    dtpTimeCreated.Value = new DateTime(lastAccessTime.Year, lastAccessTime.Month, lastAccessTime.Day)
                         .Add(File.GetCreationTime(filePath).TimeOfDay);
-                    timeAccessedTimePicker.Value = new DateTime(lastAccessTime.Year, lastAccessTime.Month, lastAccessTime.Day)
+                    dtpTimeAccessed.Value = new DateTime(lastAccessTime.Year, lastAccessTime.Month, lastAccessTime.Day)
                         .Add(lastAccessTime.TimeOfDay);
 
                     // Get file type
@@ -345,46 +345,46 @@ namespace File_Attribute_Changer
                     IntPtr hIcon = SHGetFileInfo(filePath, 0, out shfi, (uint)Marshal.SizeOf(shfi), SHGFI_TYPENAME | SHGFI_DISPLAYNAME);
 
                     // Update button states
-                    ApplyButton.Enabled = true;
-                    OKButton.Enabled = true;
+                    btnApply.Enabled = true;
+                    btnOK.Enabled = true;
 
                     if (hIcon != IntPtr.Zero)
                     {
-                        fileTypeTextBox.Text = shfi.szTypeName + " (" + fileExtension + ")";
+                        txtFileType.Text = shfi.szTypeName + " (" + fileExtension + ")";
                     }
                 }
             }
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void ApplyButton_Click(object sender, EventArgs e)
+        private void btnApply_Click(object sender, EventArgs e)
         {
             WriteAttributes();
         }
 
-        private void OKButton_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
             WriteAttributes();
             Application.Exit();
         }
 
-        private void EncryptedCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void chkEncrypted_CheckedChanged(object sender, EventArgs e)
         {
-            if (encryptedCheckBox.Checked && compressedCheckbox.Checked)
+            if (chkEncrypted.Checked && chkCompressed.Checked)
             {
-                compressedCheckbox.Checked = false;
+                chkCompressed.Checked = false;
             }
         }
 
-        private void CompressedCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void chkCompressed_CheckedChanged(object sender, EventArgs e)
         {
-            if (compressedCheckbox.Checked && encryptedCheckBox.Checked)
+            if (chkCompressed.Checked && chkEncrypted.Checked)
             {
-                encryptedCheckBox.Checked = false;
+                chkEncrypted.Checked = false;
             }
         }
     }
