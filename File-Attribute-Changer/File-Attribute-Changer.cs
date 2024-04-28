@@ -43,6 +43,9 @@ namespace File_Attribute_Changer
 
             try
             {
+                // Remove read-only attribute temporarily
+                File.SetAttributes(filePath, File.GetAttributes(filePath) & ~FileAttributes.ReadOnly);
+
                 // Write timestamp attributes
                 File.SetLastWriteTime(filePath, modifiedDateTime);
                 File.SetCreationTime(filePath, createdDateTime);
