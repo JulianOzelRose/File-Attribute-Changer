@@ -5,13 +5,14 @@ attributes like read-only, hidden, compressed, encrypted, and system. The purpos
 this program is to better understand the Windows API and the .NET Framework,
 specifically with file manipulation and bitmasks.
 
-![File-Attribute-Changer-UI](https://github.com/JulianOzelRose/File-Attribute-Changer/assets/95890436/608ddf0c-72f2-4f22-afa0-c67b6e66a1e3)
+![File-Attribute-Changer-UI](https://github.com/user-attachments/assets/36b07dca-6489-4a2d-9d38-8c96d1a59495)
 
 ## Installation and use
-This program does not require any setup. Simply navegate to the [Release](https://github.com/JulianOzelRose/File-Attribute-Changer/tree/master/File-Attribute-Changer/bin/x64/Release)
-folder, then download ```File-Attribute-Changer.exe```, and then run it. Once open, click ```Browse``` to select a file of your choice. From there,
-you can modify timestamps, encrypt/decrypt the file, compress/decompress the file, set the file to read-only, or set it as a system file. When finished just click
-```Apply``` or ```OK``` for the application to save and exit. In order to modify files located in system directories, you will have to give this application elevated privileges.
+This program does not require any setup. Simply navigate to the [Releases](https://github.com/JulianOzelRose/File-Attribute-Changer/releases)
+page, then download the .exe of the latest version under "Assets". Once open, click 'Browse' to select a file of your choice. From there,
+you can modify timestamps, encrypt/decrypt the file, compress/decompress the file, set the file to read-only, or set it as a system file. When finished, click
+'Apply' to just apply the changes, or click 'OK' to apply the changes and exit.
+In order to modify files located in system directories, you will have to give the application elevated privileges.
 
 ## Timestomping
 In the context of cybersecurity and hacking, timestomping is a technique used to manipulate or forge timestamps
