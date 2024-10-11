@@ -37,6 +37,8 @@
             this.lblMore = new System.Windows.Forms.Label();
             this.lblAuthorName = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.lblVersionNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.grpInfo.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +75,8 @@
             // 
             // grpInfo
             // 
+            this.grpInfo.Controls.Add(this.lblVersionNum);
+            this.grpInfo.Controls.Add(this.lblVersion);
             this.grpInfo.Controls.Add(this.llbGitHub);
             this.grpInfo.Controls.Add(this.lblMore);
             this.grpInfo.Controls.Add(this.lblAuthorName);
@@ -123,6 +127,24 @@
             this.lblAuthor.TabIndex = 0;
             this.lblAuthor.Text = "Author:";
             // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(15, 57);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(45, 13);
+            this.lblVersion.TabIndex = 6;
+            this.lblVersion.Text = "Version:";
+            // 
+            // lblVersionNum
+            // 
+            this.lblVersionNum.AutoSize = true;
+            this.lblVersionNum.Location = new System.Drawing.Point(217, 57);
+            this.lblVersionNum.Name = "lblVersionNum";
+            this.lblVersionNum.Size = new System.Drawing.Size(34, 13);
+            this.lblVersionNum.TabIndex = 7;
+            this.lblVersionNum.Text = "v1.00";
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,5 +179,7 @@
         private System.Windows.Forms.Label lblAuthorName;
         private System.Windows.Forms.LinkLabel llbGitHub;
         private System.Windows.Forms.Label lblMore;
+        private System.Windows.Forms.Label lblVersionNum;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
