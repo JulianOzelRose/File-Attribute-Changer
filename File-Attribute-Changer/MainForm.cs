@@ -263,6 +263,7 @@ namespace File_Attribute_Changer
         private string directoryPath;
         private string fileSizeFormatted;
         private string fileExtension;
+        private string lastDirectory = "c:\\";
         private long fileSizeBytes;
 
         // Application type
@@ -293,7 +294,7 @@ namespace File_Attribute_Changer
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.InitialDirectory = lastDirectory;
                 openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
@@ -304,6 +305,7 @@ namespace File_Attribute_Changer
                     filePath = openFileDialog.FileName;
                     fileName = Path.GetFileName(filePath);
                     directoryPath = Path.GetDirectoryName(filePath);
+                    lastDirectory = directoryPath;
 
                     // Parse file attributes
                     FileAttributes attributes = File.GetAttributes(filePath);
