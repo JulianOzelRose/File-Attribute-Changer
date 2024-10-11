@@ -410,5 +410,11 @@ namespace File_Attribute_Changer
         {
             BrowseFile();
         }
+
+        private void tsmiAbout_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog();
+        }
     }
 }

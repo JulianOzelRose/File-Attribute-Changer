@@ -68,6 +68,8 @@ namespace File_Attribute_Changer
             this.tsddbHelp = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsmiReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.lblSeparator = new System.Windows.Forms.Label();
+            this.tsmiHelpSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.grpGeneral.SuspendLayout();
             this.grpFileAttributes.SuspendLayout();
             this.grpDateAttributes.SuspendLayout();
@@ -423,7 +425,9 @@ namespace File_Attribute_Changer
             this.tsddbHelp.AutoToolTip = false;
             this.tsddbHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tsddbHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiReportBug});
+            this.tsmiReportBug,
+            this.tsmiHelpSeparator,
+            this.tsmiAbout});
             this.tsddbHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsddbHelp.Image")));
             this.tsddbHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddbHelp.Name = "tsddbHelp";
@@ -446,6 +450,18 @@ namespace File_Attribute_Changer
             this.lblSeparator.Name = "lblSeparator";
             this.lblSeparator.Size = new System.Drawing.Size(332, 2);
             this.lblSeparator.TabIndex = 22;
+            // 
+            // tsmiHelpSeparator
+            // 
+            this.tsmiHelpSeparator.Name = "tsmiHelpSeparator";
+            this.tsmiHelpSeparator.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiAbout
+            // 
+            this.tsmiAbout.Name = "tsmiAbout";
+            this.tsmiAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAbout.Text = "About";
+            this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
             // MainForm
             // 
@@ -522,6 +538,8 @@ namespace File_Attribute_Changer
         private System.Windows.Forms.ToolStripMenuItem tsmiReportBug;
         private System.Windows.Forms.ToolStripMenuItem tsmiBrowse;
         private System.Windows.Forms.ToolStripSeparator tsmiFileSeparator;
+        private System.Windows.Forms.ToolStripSeparator tsmiHelpSeparator;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAbout;
     }
 }
 
