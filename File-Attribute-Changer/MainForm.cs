@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace File_Attribute_Changer
 {
-    public partial class FileAttributeChanger : Form
+    public partial class MainForm : Form
     {
-        public FileAttributeChanger()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -289,7 +289,7 @@ namespace File_Attribute_Changer
         public const uint SHGFI_DISPLAYNAME = 0x000000200;      // Display name
         public const uint SHGFI_TYPENAME = 0x000000400;         // Type name
 
-        private void btnBrowse_Click(object sender, EventArgs e)
+        private void BrowseFile()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -359,6 +359,11 @@ namespace File_Attribute_Changer
             }
         }
 
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            BrowseFile();
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -389,6 +394,21 @@ namespace File_Attribute_Changer
             {
                 chkEncrypted.Checked = false;
             }
+        }
+
+        private void tsmiExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void tsmiReportBug_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/JulianOzelRose/File-Attribute-Changer/issues");
+        }
+
+        private void tsmiBrowse_Click(object sender, EventArgs e)
+        {
+            BrowseFile();
         }
     }
 }

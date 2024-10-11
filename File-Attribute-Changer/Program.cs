@@ -10,7 +10,7 @@ namespace File_Attribute_Changer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FileAttributeChanger());
+            Application.Run(new MainForm());
         }
     }
 }

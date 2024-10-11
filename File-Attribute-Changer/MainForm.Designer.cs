@@ -1,7 +1,7 @@
 ﻿
 namespace File_Attribute_Changer
 {
-    partial class FileAttributeChanger
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,8 @@ namespace File_Attribute_Changer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileAttributeChanger));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.grpFile = new System.Windows.Forms.GroupBox();
             this.lblFilename = new System.Windows.Forms.Label();
             this.txtFilename = new System.Windows.Forms.TextBox();
             this.grpGeneral = new System.Windows.Forms.GroupBox();
@@ -61,15 +60,23 @@ namespace File_Attribute_Changer
             this.btnApply = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.grpFile.SuspendLayout();
+            this.tsrToolStrip = new System.Windows.Forms.ToolStrip();
+            this.tsddbFile = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsmiBrowse = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiFileSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsddbHelp = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsmiReportBug = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSeparator = new System.Windows.Forms.Label();
             this.grpGeneral.SuspendLayout();
             this.grpFileAttributes.SuspendLayout();
             this.grpDateAttributes.SuspendLayout();
+            this.tsrToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(220, 19);
+            this.btnBrowse.Location = new System.Drawing.Point(244, 35);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 0;
@@ -77,33 +84,21 @@ namespace File_Attribute_Changer
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // grpFile
-            // 
-            this.grpFile.Controls.Add(this.lblFilename);
-            this.grpFile.Controls.Add(this.txtFilename);
-            this.grpFile.Controls.Add(this.btnBrowse);
-            this.grpFile.Location = new System.Drawing.Point(12, 8);
-            this.grpFile.Name = "grpFile";
-            this.grpFile.Size = new System.Drawing.Size(307, 59);
-            this.grpFile.TabIndex = 1;
-            this.grpFile.TabStop = false;
-            this.grpFile.Text = "File";
-            // 
             // lblFilename
             // 
             this.lblFilename.AutoSize = true;
-            this.lblFilename.Location = new System.Drawing.Point(12, 24);
+            this.lblFilename.Location = new System.Drawing.Point(18, 40);
             this.lblFilename.Name = "lblFilename";
-            this.lblFilename.Size = new System.Drawing.Size(38, 13);
+            this.lblFilename.Size = new System.Drawing.Size(52, 13);
             this.lblFilename.TabIndex = 5;
-            this.lblFilename.Text = "Name:";
+            this.lblFilename.Text = "Filename:";
             // 
             // txtFilename
             // 
-            this.txtFilename.Location = new System.Drawing.Point(70, 21);
+            this.txtFilename.Location = new System.Drawing.Point(76, 37);
             this.txtFilename.Name = "txtFilename";
             this.txtFilename.ReadOnly = true;
-            this.txtFilename.Size = new System.Drawing.Size(141, 20);
+            this.txtFilename.Size = new System.Drawing.Size(159, 20);
             this.txtFilename.TabIndex = 1;
             // 
             // grpGeneral
@@ -114,7 +109,7 @@ namespace File_Attribute_Changer
             this.grpGeneral.Controls.Add(this.lblFileSize);
             this.grpGeneral.Controls.Add(this.lblFileLocation);
             this.grpGeneral.Controls.Add(this.lblFileType);
-            this.grpGeneral.Location = new System.Drawing.Point(12, 73);
+            this.grpGeneral.Location = new System.Drawing.Point(12, 65);
             this.grpGeneral.Name = "grpGeneral";
             this.grpGeneral.Size = new System.Drawing.Size(307, 108);
             this.grpGeneral.TabIndex = 2;
@@ -123,7 +118,7 @@ namespace File_Attribute_Changer
             // 
             // txtFileSize
             // 
-            this.txtFileSize.Location = new System.Drawing.Point(70, 74);
+            this.txtFileSize.Location = new System.Drawing.Point(96, 74);
             this.txtFileSize.Name = "txtFileSize";
             this.txtFileSize.ReadOnly = true;
             this.txtFileSize.Size = new System.Drawing.Size(196, 20);
@@ -131,7 +126,7 @@ namespace File_Attribute_Changer
             // 
             // txtFileLocation
             // 
-            this.txtFileLocation.Location = new System.Drawing.Point(70, 46);
+            this.txtFileLocation.Location = new System.Drawing.Point(96, 46);
             this.txtFileLocation.Name = "txtFileLocation";
             this.txtFileLocation.ReadOnly = true;
             this.txtFileLocation.Size = new System.Drawing.Size(196, 20);
@@ -139,7 +134,7 @@ namespace File_Attribute_Changer
             // 
             // txtFileType
             // 
-            this.txtFileType.Location = new System.Drawing.Point(70, 18);
+            this.txtFileType.Location = new System.Drawing.Point(96, 18);
             this.txtFileType.Name = "txtFileType";
             this.txtFileType.ReadOnly = true;
             this.txtFileType.Size = new System.Drawing.Size(196, 20);
@@ -180,7 +175,7 @@ namespace File_Attribute_Changer
             this.grpFileAttributes.Controls.Add(this.chkSystem);
             this.grpFileAttributes.Controls.Add(this.chkHidden);
             this.grpFileAttributes.Controls.Add(this.chkReadOnly);
-            this.grpFileAttributes.Location = new System.Drawing.Point(12, 187);
+            this.grpFileAttributes.Location = new System.Drawing.Point(12, 179);
             this.grpFileAttributes.Name = "grpFileAttributes";
             this.grpFileAttributes.Size = new System.Drawing.Size(307, 70);
             this.grpFileAttributes.TabIndex = 3;
@@ -261,7 +256,7 @@ namespace File_Attribute_Changer
             this.grpDateAttributes.Controls.Add(this.dtpDateAccessed);
             this.grpDateAttributes.Controls.Add(this.dtpDateModified);
             this.grpDateAttributes.Controls.Add(this.dtpDateCreated);
-            this.grpDateAttributes.Location = new System.Drawing.Point(12, 263);
+            this.grpDateAttributes.Location = new System.Drawing.Point(12, 255);
             this.grpDateAttributes.Name = "grpDateAttributes";
             this.grpDateAttributes.Size = new System.Drawing.Size(307, 131);
             this.grpDateAttributes.TabIndex = 4;
@@ -271,7 +266,7 @@ namespace File_Attribute_Changer
             // dtpTimeAccessed
             // 
             this.dtpTimeAccessed.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpTimeAccessed.Location = new System.Drawing.Point(171, 90);
+            this.dtpTimeAccessed.Location = new System.Drawing.Point(197, 90);
             this.dtpTimeAccessed.Name = "dtpTimeAccessed";
             this.dtpTimeAccessed.Size = new System.Drawing.Size(95, 20);
             this.dtpTimeAccessed.TabIndex = 8;
@@ -279,7 +274,7 @@ namespace File_Attribute_Changer
             // dtpTimeModified
             // 
             this.dtpTimeModified.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpTimeModified.Location = new System.Drawing.Point(171, 58);
+            this.dtpTimeModified.Location = new System.Drawing.Point(197, 58);
             this.dtpTimeModified.Name = "dtpTimeModified";
             this.dtpTimeModified.Size = new System.Drawing.Size(95, 20);
             this.dtpTimeModified.TabIndex = 7;
@@ -287,7 +282,7 @@ namespace File_Attribute_Changer
             // dtpTimeCreated
             // 
             this.dtpTimeCreated.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpTimeCreated.Location = new System.Drawing.Point(171, 27);
+            this.dtpTimeCreated.Location = new System.Drawing.Point(197, 27);
             this.dtpTimeCreated.Name = "dtpTimeCreated";
             this.dtpTimeCreated.Size = new System.Drawing.Size(95, 20);
             this.dtpTimeCreated.TabIndex = 6;
@@ -322,7 +317,7 @@ namespace File_Attribute_Changer
             // dtpDateAccessed
             // 
             this.dtpDateAccessed.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateAccessed.Location = new System.Drawing.Point(70, 90);
+            this.dtpDateAccessed.Location = new System.Drawing.Point(96, 90);
             this.dtpDateAccessed.Name = "dtpDateAccessed";
             this.dtpDateAccessed.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpDateAccessed.Size = new System.Drawing.Size(95, 20);
@@ -331,7 +326,7 @@ namespace File_Attribute_Changer
             // dtpDateModified
             // 
             this.dtpDateModified.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateModified.Location = new System.Drawing.Point(70, 58);
+            this.dtpDateModified.Location = new System.Drawing.Point(96, 58);
             this.dtpDateModified.Name = "dtpDateModified";
             this.dtpDateModified.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpDateModified.Size = new System.Drawing.Size(95, 20);
@@ -340,7 +335,7 @@ namespace File_Attribute_Changer
             // dtpDateCreated
             // 
             this.dtpDateCreated.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateCreated.Location = new System.Drawing.Point(70, 27);
+            this.dtpDateCreated.Location = new System.Drawing.Point(96, 27);
             this.dtpDateCreated.Name = "dtpDateCreated";
             this.dtpDateCreated.Size = new System.Drawing.Size(95, 20);
             this.dtpDateCreated.TabIndex = 0;
@@ -348,7 +343,7 @@ namespace File_Attribute_Changer
             // btnApply
             // 
             this.btnApply.Enabled = false;
-            this.btnApply.Location = new System.Drawing.Point(244, 400);
+            this.btnApply.Location = new System.Drawing.Point(244, 392);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 23);
             this.btnApply.TabIndex = 2;
@@ -358,7 +353,7 @@ namespace File_Attribute_Changer
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(163, 400);
+            this.btnCancel.Location = new System.Drawing.Point(163, 392);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
@@ -369,7 +364,7 @@ namespace File_Attribute_Changer
             // btnOK
             // 
             this.btnOK.Enabled = false;
-            this.btnOK.Location = new System.Drawing.Point(82, 400);
+            this.btnOK.Location = new System.Drawing.Point(82, 392);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 6;
@@ -377,40 +372,119 @@ namespace File_Attribute_Changer
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // FileAttributeChanger
+            // tsrToolStrip
+            // 
+            this.tsrToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tsrToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsddbFile,
+            this.tsddbHelp});
+            this.tsrToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.tsrToolStrip.Name = "tsrToolStrip";
+            this.tsrToolStrip.Size = new System.Drawing.Size(332, 25);
+            this.tsrToolStrip.TabIndex = 7;
+            this.tsrToolStrip.Text = "toolStrip1";
+            // 
+            // tsddbFile
+            // 
+            this.tsddbFile.AutoToolTip = false;
+            this.tsddbFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsddbFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiBrowse,
+            this.tsmiFileSeparator,
+            this.tsmiExit});
+            this.tsddbFile.Image = ((System.Drawing.Image)(resources.GetObject("tsddbFile.Image")));
+            this.tsddbFile.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsddbFile.Name = "tsddbFile";
+            this.tsddbFile.ShowDropDownArrow = false;
+            this.tsddbFile.Size = new System.Drawing.Size(29, 22);
+            this.tsddbFile.Text = "File";
+            // 
+            // tsmiBrowse
+            // 
+            this.tsmiBrowse.Name = "tsmiBrowse";
+            this.tsmiBrowse.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBrowse.Text = "Browse...";
+            this.tsmiBrowse.Click += new System.EventHandler(this.tsmiBrowse_Click);
+            // 
+            // tsmiFileSeparator
+            // 
+            this.tsmiFileSeparator.Name = "tsmiFileSeparator";
+            this.tsmiFileSeparator.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiExit
+            // 
+            this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.Size = new System.Drawing.Size(180, 22);
+            this.tsmiExit.Text = "Exit";
+            this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
+            // 
+            // tsddbHelp
+            // 
+            this.tsddbHelp.AutoToolTip = false;
+            this.tsddbHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsddbHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiReportBug});
+            this.tsddbHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsddbHelp.Image")));
+            this.tsddbHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsddbHelp.Name = "tsddbHelp";
+            this.tsddbHelp.ShowDropDownArrow = false;
+            this.tsddbHelp.Size = new System.Drawing.Size(36, 22);
+            this.tsddbHelp.Text = "Help";
+            // 
+            // tsmiReportBug
+            // 
+            this.tsmiReportBug.Name = "tsmiReportBug";
+            this.tsmiReportBug.Size = new System.Drawing.Size(180, 22);
+            this.tsmiReportBug.Text = "Report a Bug";
+            this.tsmiReportBug.Click += new System.EventHandler(this.tsmiReportBug_Click);
+            // 
+            // lblSeparator
+            // 
+            this.lblSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSeparator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSeparator.Location = new System.Drawing.Point(0, 25);
+            this.lblSeparator.Name = "lblSeparator";
+            this.lblSeparator.Size = new System.Drawing.Size(332, 2);
+            this.lblSeparator.TabIndex = 22;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 429);
+            this.ClientSize = new System.Drawing.Size(332, 424);
+            this.Controls.Add(this.lblSeparator);
+            this.Controls.Add(this.tsrToolStrip);
+            this.Controls.Add(this.lblFilename);
             this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.txtFilename);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.grpDateAttributes);
             this.Controls.Add(this.grpFileAttributes);
             this.Controls.Add(this.grpGeneral);
-            this.Controls.Add(this.grpFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FileAttributeChanger";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "File Attribute Changer";
-            this.grpFile.ResumeLayout(false);
-            this.grpFile.PerformLayout();
             this.grpGeneral.ResumeLayout(false);
             this.grpGeneral.PerformLayout();
             this.grpFileAttributes.ResumeLayout(false);
             this.grpFileAttributes.PerformLayout();
             this.grpDateAttributes.ResumeLayout(false);
             this.grpDateAttributes.PerformLayout();
+            this.tsrToolStrip.ResumeLayout(false);
+            this.tsrToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.GroupBox grpFile;
         private System.Windows.Forms.TextBox txtFilename;
         private System.Windows.Forms.GroupBox grpGeneral;
         private System.Windows.Forms.TextBox txtFileSize;
@@ -440,6 +514,14 @@ namespace File_Attribute_Changer
         private System.Windows.Forms.CheckBox chkCompressed;
         private System.Windows.Forms.CheckBox chkEncrypted;
         private System.Windows.Forms.Label lblFilename;
+        private System.Windows.Forms.ToolStrip tsrToolStrip;
+        private System.Windows.Forms.ToolStripDropDownButton tsddbFile;
+        private System.Windows.Forms.ToolStripDropDownButton tsddbHelp;
+        private System.Windows.Forms.Label lblSeparator;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExit;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReportBug;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBrowse;
+        private System.Windows.Forms.ToolStripSeparator tsmiFileSeparator;
     }
 }
 
