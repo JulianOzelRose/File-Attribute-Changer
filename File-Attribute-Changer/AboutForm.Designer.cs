@@ -33,12 +33,12 @@
             this.lblProgramTitle = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.grpInfo = new System.Windows.Forms.GroupBox();
+            this.lblVersionNum = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.llbGitHub = new System.Windows.Forms.LinkLabel();
             this.lblMore = new System.Windows.Forms.Label();
             this.lblAuthorName = new System.Windows.Forms.Label();
             this.lblAuthor = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.lblVersionNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.grpInfo.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             // 
             // btnOK
             // 
+            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Location = new System.Drawing.Point(106, 317);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(81, 25);
@@ -82,18 +83,37 @@
             this.grpInfo.Controls.Add(this.lblAuthorName);
             this.grpInfo.Controls.Add(this.lblAuthor);
             this.grpInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.grpInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpInfo.Location = new System.Drawing.Point(13, 185);
             this.grpInfo.Name = "grpInfo";
             this.grpInfo.Size = new System.Drawing.Size(266, 121);
             this.grpInfo.TabIndex = 27;
             this.grpInfo.TabStop = false;
             // 
+            // lblVersionNum
+            // 
+            this.lblVersionNum.AutoSize = true;
+            this.lblVersionNum.Location = new System.Drawing.Point(217, 57);
+            this.lblVersionNum.Name = "lblVersionNum";
+            this.lblVersionNum.Size = new System.Drawing.Size(34, 15);
+            this.lblVersionNum.TabIndex = 7;
+            this.lblVersionNum.Text = "v1.00";
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(15, 57);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(48, 15);
+            this.lblVersion.TabIndex = 6;
+            this.lblVersion.Text = "Version:";
+            // 
             // llbGitHub
             // 
             this.llbGitHub.AutoSize = true;
             this.llbGitHub.Location = new System.Drawing.Point(211, 90);
             this.llbGitHub.Name = "llbGitHub";
-            this.llbGitHub.Size = new System.Drawing.Size(40, 13);
+            this.llbGitHub.Size = new System.Drawing.Size(45, 15);
             this.llbGitHub.TabIndex = 5;
             this.llbGitHub.TabStop = true;
             this.llbGitHub.Text = "GitHub";
@@ -105,7 +125,7 @@
             this.lblMore.AutoSize = true;
             this.lblMore.Location = new System.Drawing.Point(15, 90);
             this.lblMore.Name = "lblMore";
-            this.lblMore.Size = new System.Drawing.Size(34, 13);
+            this.lblMore.Size = new System.Drawing.Size(38, 15);
             this.lblMore.TabIndex = 4;
             this.lblMore.Text = "More:";
             // 
@@ -114,7 +134,7 @@
             this.lblAuthorName.AutoSize = true;
             this.lblAuthorName.Location = new System.Drawing.Point(165, 24);
             this.lblAuthorName.Name = "lblAuthorName";
-            this.lblAuthorName.Size = new System.Drawing.Size(86, 13);
+            this.lblAuthorName.Size = new System.Drawing.Size(91, 15);
             this.lblAuthorName.TabIndex = 3;
             this.lblAuthorName.Text = "Julian Ozel Rose";
             // 
@@ -123,27 +143,9 @@
             this.lblAuthor.AutoSize = true;
             this.lblAuthor.Location = new System.Drawing.Point(15, 24);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(41, 13);
+            this.lblAuthor.Size = new System.Drawing.Size(47, 15);
             this.lblAuthor.TabIndex = 0;
             this.lblAuthor.Text = "Author:";
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(15, 57);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(45, 13);
-            this.lblVersion.TabIndex = 6;
-            this.lblVersion.Text = "Version:";
-            // 
-            // lblVersionNum
-            // 
-            this.lblVersionNum.AutoSize = true;
-            this.lblVersionNum.Location = new System.Drawing.Point(217, 57);
-            this.lblVersionNum.Name = "lblVersionNum";
-            this.lblVersionNum.Size = new System.Drawing.Size(34, 13);
-            this.lblVersionNum.TabIndex = 7;
-            this.lblVersionNum.Text = "v1.00";
             // 
             // AboutForm
             // 
@@ -154,6 +156,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblProgramTitle);
             this.Controls.Add(this.picLogo);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
