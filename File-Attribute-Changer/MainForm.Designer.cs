@@ -67,9 +67,9 @@ namespace File_Attribute_Changer
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsddbHelp = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsmiReportBug = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblSeparator = new System.Windows.Forms.Label();
             this.tsmiHelpSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSeparator = new System.Windows.Forms.Label();
             this.grpGeneral.SuspendLayout();
             this.grpFileAttributes.SuspendLayout();
             this.grpDateAttributes.SuspendLayout();
@@ -78,6 +78,7 @@ namespace File_Attribute_Changer
             // 
             // btnBrowse
             // 
+            this.btnBrowse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowse.Location = new System.Drawing.Point(244, 35);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
@@ -89,18 +90,20 @@ namespace File_Attribute_Changer
             // lblFilename
             // 
             this.lblFilename.AutoSize = true;
+            this.lblFilename.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFilename.Location = new System.Drawing.Point(18, 40);
             this.lblFilename.Name = "lblFilename";
-            this.lblFilename.Size = new System.Drawing.Size(52, 13);
+            this.lblFilename.Size = new System.Drawing.Size(58, 15);
             this.lblFilename.TabIndex = 5;
             this.lblFilename.Text = "Filename:";
             // 
             // txtFilename
             // 
+            this.txtFilename.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFilename.Location = new System.Drawing.Point(76, 37);
             this.txtFilename.Name = "txtFilename";
             this.txtFilename.ReadOnly = true;
-            this.txtFilename.Size = new System.Drawing.Size(159, 20);
+            this.txtFilename.Size = new System.Drawing.Size(159, 23);
             this.txtFilename.TabIndex = 1;
             // 
             // grpGeneral
@@ -111,6 +114,7 @@ namespace File_Attribute_Changer
             this.grpGeneral.Controls.Add(this.lblFileSize);
             this.grpGeneral.Controls.Add(this.lblFileLocation);
             this.grpGeneral.Controls.Add(this.lblFileType);
+            this.grpGeneral.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpGeneral.Location = new System.Drawing.Point(12, 65);
             this.grpGeneral.Name = "grpGeneral";
             this.grpGeneral.Size = new System.Drawing.Size(307, 108);
@@ -120,52 +124,58 @@ namespace File_Attribute_Changer
             // 
             // txtFileSize
             // 
+            this.txtFileSize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFileSize.Location = new System.Drawing.Point(96, 74);
             this.txtFileSize.Name = "txtFileSize";
             this.txtFileSize.ReadOnly = true;
-            this.txtFileSize.Size = new System.Drawing.Size(196, 20);
+            this.txtFileSize.Size = new System.Drawing.Size(196, 23);
             this.txtFileSize.TabIndex = 4;
             // 
             // txtFileLocation
             // 
+            this.txtFileLocation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFileLocation.Location = new System.Drawing.Point(96, 46);
             this.txtFileLocation.Name = "txtFileLocation";
             this.txtFileLocation.ReadOnly = true;
-            this.txtFileLocation.Size = new System.Drawing.Size(196, 20);
+            this.txtFileLocation.Size = new System.Drawing.Size(196, 23);
             this.txtFileLocation.TabIndex = 3;
             // 
             // txtFileType
             // 
+            this.txtFileType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFileType.Location = new System.Drawing.Point(96, 18);
             this.txtFileType.Name = "txtFileType";
             this.txtFileType.ReadOnly = true;
-            this.txtFileType.Size = new System.Drawing.Size(196, 20);
+            this.txtFileType.Size = new System.Drawing.Size(196, 23);
             this.txtFileType.TabIndex = 2;
             // 
             // lblFileSize
             // 
             this.lblFileSize.AutoSize = true;
+            this.lblFileSize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFileSize.Location = new System.Drawing.Point(12, 77);
             this.lblFileSize.Name = "lblFileSize";
-            this.lblFileSize.Size = new System.Drawing.Size(30, 13);
+            this.lblFileSize.Size = new System.Drawing.Size(30, 15);
             this.lblFileSize.TabIndex = 2;
             this.lblFileSize.Text = "Size:";
             // 
             // lblFileLocation
             // 
             this.lblFileLocation.AutoSize = true;
+            this.lblFileLocation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFileLocation.Location = new System.Drawing.Point(12, 49);
             this.lblFileLocation.Name = "lblFileLocation";
-            this.lblFileLocation.Size = new System.Drawing.Size(51, 13);
+            this.lblFileLocation.Size = new System.Drawing.Size(56, 15);
             this.lblFileLocation.TabIndex = 1;
             this.lblFileLocation.Text = "Location:";
             // 
             // lblFileType
             // 
             this.lblFileType.AutoSize = true;
+            this.lblFileType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFileType.Location = new System.Drawing.Point(12, 21);
             this.lblFileType.Name = "lblFileType";
-            this.lblFileType.Size = new System.Drawing.Size(34, 13);
+            this.lblFileType.Size = new System.Drawing.Size(35, 15);
             this.lblFileType.TabIndex = 0;
             this.lblFileType.Text = "Type:";
             // 
@@ -177,6 +187,7 @@ namespace File_Attribute_Changer
             this.grpFileAttributes.Controls.Add(this.chkSystem);
             this.grpFileAttributes.Controls.Add(this.chkHidden);
             this.grpFileAttributes.Controls.Add(this.chkReadOnly);
+            this.grpFileAttributes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpFileAttributes.Location = new System.Drawing.Point(12, 179);
             this.grpFileAttributes.Name = "grpFileAttributes";
             this.grpFileAttributes.Size = new System.Drawing.Size(307, 70);
@@ -187,9 +198,10 @@ namespace File_Attribute_Changer
             // chkEncrypted
             // 
             this.chkEncrypted.AutoSize = true;
+            this.chkEncrypted.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEncrypted.Location = new System.Drawing.Point(125, 42);
             this.chkEncrypted.Name = "chkEncrypted";
-            this.chkEncrypted.Size = new System.Drawing.Size(62, 17);
+            this.chkEncrypted.Size = new System.Drawing.Size(66, 19);
             this.chkEncrypted.TabIndex = 7;
             this.chkEncrypted.Text = "Encrypt";
             this.chkEncrypted.UseVisualStyleBackColor = true;
@@ -198,9 +210,10 @@ namespace File_Attribute_Changer
             // chkCompressed
             // 
             this.chkCompressed.AutoSize = true;
+            this.chkCompressed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkCompressed.Location = new System.Drawing.Point(15, 42);
             this.chkCompressed.Name = "chkCompressed";
-            this.chkCompressed.Size = new System.Drawing.Size(72, 17);
+            this.chkCompressed.Size = new System.Drawing.Size(79, 19);
             this.chkCompressed.TabIndex = 6;
             this.chkCompressed.Text = "Compress";
             this.chkCompressed.UseVisualStyleBackColor = true;
@@ -210,9 +223,10 @@ namespace File_Attribute_Changer
             // 
             this.chkIndexed.AutoSize = true;
             this.chkIndexed.Enabled = false;
+            this.chkIndexed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkIndexed.Location = new System.Drawing.Point(232, 19);
             this.chkIndexed.Name = "chkIndexed";
-            this.chkIndexed.Size = new System.Drawing.Size(52, 17);
+            this.chkIndexed.Size = new System.Drawing.Size(54, 19);
             this.chkIndexed.TabIndex = 5;
             this.chkIndexed.Text = "Index";
             this.chkIndexed.UseVisualStyleBackColor = true;
@@ -220,9 +234,10 @@ namespace File_Attribute_Changer
             // chkSystem
             // 
             this.chkSystem.AutoSize = true;
+            this.chkSystem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSystem.Location = new System.Drawing.Point(232, 42);
             this.chkSystem.Name = "chkSystem";
-            this.chkSystem.Size = new System.Drawing.Size(60, 17);
+            this.chkSystem.Size = new System.Drawing.Size(64, 19);
             this.chkSystem.TabIndex = 4;
             this.chkSystem.Text = "System";
             this.chkSystem.UseVisualStyleBackColor = true;
@@ -230,9 +245,10 @@ namespace File_Attribute_Changer
             // chkHidden
             // 
             this.chkHidden.AutoSize = true;
+            this.chkHidden.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkHidden.Location = new System.Drawing.Point(125, 19);
             this.chkHidden.Name = "chkHidden";
-            this.chkHidden.Size = new System.Drawing.Size(60, 17);
+            this.chkHidden.Size = new System.Drawing.Size(65, 19);
             this.chkHidden.TabIndex = 3;
             this.chkHidden.Text = "Hidden";
             this.chkHidden.UseVisualStyleBackColor = true;
@@ -240,9 +256,10 @@ namespace File_Attribute_Changer
             // chkReadOnly
             // 
             this.chkReadOnly.AutoSize = true;
+            this.chkReadOnly.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkReadOnly.Location = new System.Drawing.Point(15, 19);
             this.chkReadOnly.Name = "chkReadOnly";
-            this.chkReadOnly.Size = new System.Drawing.Size(74, 17);
+            this.chkReadOnly.Size = new System.Drawing.Size(80, 19);
             this.chkReadOnly.TabIndex = 2;
             this.chkReadOnly.Text = "Read-only";
             this.chkReadOnly.UseVisualStyleBackColor = true;
@@ -258,6 +275,7 @@ namespace File_Attribute_Changer
             this.grpDateAttributes.Controls.Add(this.dtpDateAccessed);
             this.grpDateAttributes.Controls.Add(this.dtpDateModified);
             this.grpDateAttributes.Controls.Add(this.dtpDateCreated);
+            this.grpDateAttributes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDateAttributes.Location = new System.Drawing.Point(12, 255);
             this.grpDateAttributes.Name = "grpDateAttributes";
             this.grpDateAttributes.Size = new System.Drawing.Size(307, 131);
@@ -267,84 +285,94 @@ namespace File_Attribute_Changer
             // 
             // dtpTimeAccessed
             // 
+            this.dtpTimeAccessed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeAccessed.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpTimeAccessed.Location = new System.Drawing.Point(197, 90);
             this.dtpTimeAccessed.Name = "dtpTimeAccessed";
-            this.dtpTimeAccessed.Size = new System.Drawing.Size(95, 20);
+            this.dtpTimeAccessed.Size = new System.Drawing.Size(95, 23);
             this.dtpTimeAccessed.TabIndex = 8;
             // 
             // dtpTimeModified
             // 
+            this.dtpTimeModified.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeModified.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpTimeModified.Location = new System.Drawing.Point(197, 58);
             this.dtpTimeModified.Name = "dtpTimeModified";
-            this.dtpTimeModified.Size = new System.Drawing.Size(95, 20);
+            this.dtpTimeModified.Size = new System.Drawing.Size(95, 23);
             this.dtpTimeModified.TabIndex = 7;
             // 
             // dtpTimeCreated
             // 
+            this.dtpTimeCreated.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTimeCreated.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpTimeCreated.Location = new System.Drawing.Point(197, 27);
             this.dtpTimeCreated.Name = "dtpTimeCreated";
-            this.dtpTimeCreated.Size = new System.Drawing.Size(95, 20);
+            this.dtpTimeCreated.Size = new System.Drawing.Size(95, 23);
             this.dtpTimeCreated.TabIndex = 6;
             // 
             // lblDateAccessed
             // 
             this.lblDateAccessed.AutoSize = true;
+            this.lblDateAccessed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateAccessed.Location = new System.Drawing.Point(8, 92);
             this.lblDateAccessed.Name = "lblDateAccessed";
-            this.lblDateAccessed.Size = new System.Drawing.Size(57, 13);
+            this.lblDateAccessed.Size = new System.Drawing.Size(59, 15);
             this.lblDateAccessed.TabIndex = 5;
             this.lblDateAccessed.Text = "Accessed:";
             // 
             // lblDateModified
             // 
             this.lblDateModified.AutoSize = true;
+            this.lblDateModified.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateModified.Location = new System.Drawing.Point(8, 62);
             this.lblDateModified.Name = "lblDateModified";
-            this.lblDateModified.Size = new System.Drawing.Size(50, 13);
+            this.lblDateModified.Size = new System.Drawing.Size(58, 15);
             this.lblDateModified.TabIndex = 4;
             this.lblDateModified.Text = "Modified:";
             // 
             // lblDateCreated
             // 
             this.lblDateCreated.AutoSize = true;
+            this.lblDateCreated.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateCreated.Location = new System.Drawing.Point(8, 31);
             this.lblDateCreated.Name = "lblDateCreated";
-            this.lblDateCreated.Size = new System.Drawing.Size(47, 13);
+            this.lblDateCreated.Size = new System.Drawing.Size(51, 15);
             this.lblDateCreated.TabIndex = 3;
             this.lblDateCreated.Text = "Created:";
             // 
             // dtpDateAccessed
             // 
+            this.dtpDateAccessed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateAccessed.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateAccessed.Location = new System.Drawing.Point(96, 90);
             this.dtpDateAccessed.Name = "dtpDateAccessed";
             this.dtpDateAccessed.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpDateAccessed.Size = new System.Drawing.Size(95, 20);
+            this.dtpDateAccessed.Size = new System.Drawing.Size(95, 23);
             this.dtpDateAccessed.TabIndex = 2;
             // 
             // dtpDateModified
             // 
+            this.dtpDateModified.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateModified.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateModified.Location = new System.Drawing.Point(96, 58);
             this.dtpDateModified.Name = "dtpDateModified";
             this.dtpDateModified.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpDateModified.Size = new System.Drawing.Size(95, 20);
+            this.dtpDateModified.Size = new System.Drawing.Size(95, 23);
             this.dtpDateModified.TabIndex = 1;
             // 
             // dtpDateCreated
             // 
+            this.dtpDateCreated.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateCreated.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateCreated.Location = new System.Drawing.Point(96, 27);
             this.dtpDateCreated.Name = "dtpDateCreated";
-            this.dtpDateCreated.Size = new System.Drawing.Size(95, 20);
+            this.dtpDateCreated.Size = new System.Drawing.Size(95, 23);
             this.dtpDateCreated.TabIndex = 0;
             // 
             // btnApply
             // 
             this.btnApply.Enabled = false;
+            this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApply.Location = new System.Drawing.Point(244, 392);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 23);
@@ -355,6 +383,7 @@ namespace File_Attribute_Changer
             // 
             // btnCancel
             // 
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(163, 392);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -366,6 +395,7 @@ namespace File_Attribute_Changer
             // btnOK
             // 
             this.btnOK.Enabled = false;
+            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Location = new System.Drawing.Point(82, 392);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
@@ -442,15 +472,6 @@ namespace File_Attribute_Changer
             this.tsmiReportBug.Text = "Report a Bug";
             this.tsmiReportBug.Click += new System.EventHandler(this.tsmiReportBug_Click);
             // 
-            // lblSeparator
-            // 
-            this.lblSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblSeparator.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSeparator.Location = new System.Drawing.Point(0, 25);
-            this.lblSeparator.Name = "lblSeparator";
-            this.lblSeparator.Size = new System.Drawing.Size(332, 2);
-            this.lblSeparator.TabIndex = 22;
-            // 
             // tsmiHelpSeparator
             // 
             this.tsmiHelpSeparator.Name = "tsmiHelpSeparator";
@@ -462,6 +483,16 @@ namespace File_Attribute_Changer
             this.tsmiAbout.Size = new System.Drawing.Size(180, 22);
             this.tsmiAbout.Text = "About";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
+            // 
+            // lblSeparator
+            // 
+            this.lblSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSeparator.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSeparator.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeparator.Location = new System.Drawing.Point(0, 25);
+            this.lblSeparator.Name = "lblSeparator";
+            this.lblSeparator.Size = new System.Drawing.Size(332, 2);
+            this.lblSeparator.TabIndex = 22;
             // 
             // MainForm
             // 
@@ -479,6 +510,7 @@ namespace File_Attribute_Changer
             this.Controls.Add(this.grpDateAttributes);
             this.Controls.Add(this.grpFileAttributes);
             this.Controls.Add(this.grpGeneral);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
