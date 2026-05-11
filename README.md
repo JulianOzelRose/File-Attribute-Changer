@@ -5,7 +5,7 @@ attributes like read-only, hidden, compressed, encrypted, and system. The purpos
 this program is to better understand the Windows API and the .NET Framework,
 specifically with file manipulation and bitmasks.
 
-<img width="334" height="456" alt="File-Attribute-Changer-UI" src="https://github.com/user-attachments/assets/8b294d72-2678-4d95-a18f-19eeca59bbee" />
+<img width="334" height="456" alt="File-Attribute-Changer-UI" src="https://github.com/user-attachments/assets/03af2853-33ae-41dc-ac90-5564c01891ed" />
 
 
 ## Installation and use
