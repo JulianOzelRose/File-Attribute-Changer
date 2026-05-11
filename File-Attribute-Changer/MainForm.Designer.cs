@@ -79,7 +79,7 @@ namespace File_Attribute_Changer
             // btnBrowse
             // 
             this.btnBrowse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(244, 35);
+            this.btnBrowse.Location = new System.Drawing.Point(244, 37);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 0;
@@ -434,19 +434,19 @@ namespace File_Attribute_Changer
             // tsmiBrowse
             // 
             this.tsmiBrowse.Name = "tsmiBrowse";
-            this.tsmiBrowse.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBrowse.Size = new System.Drawing.Size(121, 22);
             this.tsmiBrowse.Text = "Browse...";
             this.tsmiBrowse.Click += new System.EventHandler(this.tsmiBrowse_Click);
             // 
             // tsmiFileSeparator
             // 
             this.tsmiFileSeparator.Name = "tsmiFileSeparator";
-            this.tsmiFileSeparator.Size = new System.Drawing.Size(177, 6);
+            this.tsmiFileSeparator.Size = new System.Drawing.Size(118, 6);
             // 
             // tsmiExit
             // 
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(180, 22);
+            this.tsmiExit.Size = new System.Drawing.Size(121, 22);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -468,19 +468,19 @@ namespace File_Attribute_Changer
             // tsmiReportBug
             // 
             this.tsmiReportBug.Name = "tsmiReportBug";
-            this.tsmiReportBug.Size = new System.Drawing.Size(180, 22);
+            this.tsmiReportBug.Size = new System.Drawing.Size(142, 22);
             this.tsmiReportBug.Text = "Report a Bug";
             this.tsmiReportBug.Click += new System.EventHandler(this.tsmiReportBug_Click);
             // 
             // tsmiHelpSeparator
             // 
             this.tsmiHelpSeparator.Name = "tsmiHelpSeparator";
-            this.tsmiHelpSeparator.Size = new System.Drawing.Size(177, 6);
+            this.tsmiHelpSeparator.Size = new System.Drawing.Size(139, 6);
             // 
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAbout.Size = new System.Drawing.Size(142, 22);
             this.tsmiAbout.Text = "About";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
